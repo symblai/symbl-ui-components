@@ -1,7 +1,5 @@
 # symbl-ui-components
 
-You can read the docs for the Symbl UI Components at https://docs.symbl.ai/docs/
-
 >Integrate Symbl UI components with your application in customized way
 
 ## Supported Browsers
