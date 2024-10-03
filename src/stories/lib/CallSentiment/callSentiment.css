@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Sintony&display=swap');
+
+.sentiment-chart {
+    font-family: "Sintony", sans-serif;
+    min-height: 300px;
+}
+.sentiment-chart-tooltip {
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid pink;
+}
+.sentiment-chart-tooltip > div:first-child {
+    padding: 2px;
+    border: 1px solid grey;
+    margin-bottom: 10px;
+}
+
+.call-sentiment-container {
+    font-family: "Sintony", sans-serif;
+    border: 1px solid lightgray;
+    border-radius: 12px;
+    background-color: #FEF7F8;
+    padding: 20px;
+}
+
+.title-bar {
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline;
+}

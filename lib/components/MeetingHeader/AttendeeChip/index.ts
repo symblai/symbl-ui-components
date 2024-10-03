@@ -1,0 +1,1 @@
+export {AttendeeChip} from "./AttendeeChip"

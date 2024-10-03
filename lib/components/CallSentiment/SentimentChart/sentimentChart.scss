@@ -1,0 +1,21 @@
+$chart-area-top: rgba(211, 120, 242, 0.25);
+$chart-area-bottom: rgba(211, 120, 242, 0);
+$chart-start: #5A9CFF;
+$chart-middle: #D378F2;
+$chart-end: #E28A9C;
+
+:export {
+  chartAreaTop: $chart-area-top;
+  chartAreaBottom: $chart-area-bottom;
+  chartStart: $chart-start;
+  chartMiddle: $chart-middle;
+  chartEnd: $chart-end;
+}
+
+.symbl-sentiment-chart {
+  position: relative;
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  min-height: 500px;
+}

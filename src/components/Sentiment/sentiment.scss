@@ -1,0 +1,23 @@
+@import "src/assets/colors";
+
+.symbl-neutral, .symbl-neutral svg {
+  color: $neutral;
+  stroke: $neutral;
+}
+.symbl-positive, .symbl-positive svg {
+  color: $green;
+  stroke: $green;
+}
+.symbl-negative, .symbl-negative svg{
+  color: $red;
+  stroke: $red;
+}
+.symbl-sentiment-text {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+}
+.symbl-sentiment-text .symbl-bold-text {
+  font-weight: 600;
+}

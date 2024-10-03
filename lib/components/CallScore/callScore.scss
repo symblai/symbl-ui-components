@@ -1,0 +1,15 @@
+@import "src/assets/utilityClasses";
+
+.symbl-call-score-container {
+  @extend .basic-container;
+  text-align: left;
+}
+.symbl-call-score-summary {
+  font-size: 14px;
+}
+.symbl-section-title {
+  font-weight: 600;
+  padding-bottom: 8px;
+  font-size: 16px;
+  margin: 0;
+}

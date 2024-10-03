@@ -1,0 +1,52 @@
+@import "src/assets/colors";
+@import "src/assets/utilityClasses";
+@import "src/assets/_constants";
+
+.symbl-sentiment-chart-tooltip {
+  border-radius: 8px;
+  border: 1px solid $grey-border;
+  background: $white;
+  box-shadow: 0 4px 8px -2px $box-shadow-color1, 0px 12px 16px -4px $box-shadow-color2;
+  padding: 12px;
+  position: absolute;
+  width: #{$sentiment-chart-tooltip-width}px;
+  pointer-events: none;
+  transform: translateX(-70px);
+}
+
+.symbl-tooltip-banner {
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+}
+
+.symbl-timestamp {
+  display: flex;
+  padding: 6px 12px;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  border: 1px solid $grey-border;
+  background: $white;
+}
+
+.symbl-sentiment-score {
+  display: flex;
+  text-align: right;
+  padding: 6px 12px;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.symbl-sentiment-summary {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+  text-align: left;
+  font-size: 0.875rem;
+}

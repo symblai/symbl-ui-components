@@ -1,0 +1,37 @@
+@import "src/assets/colors";
+@import "src/assets/utilityClasses";
+.symbl-meeting-header {
+  @extend .basic-container;
+}
+.symbl-meeting-title {
+  font-size: 16px;
+  font-weight: 600;
+  cursor: auto;
+  margin: 0 0 8px 0;
+}
+.symbl-meeting-title.with-meeting-link {
+  cursor: pointer;
+}
+.symbl-meeting-title.symbl-margin-top-16 {
+  margin-top: 16px;
+}
+.symbl-meeting-details {
+  display: flex;
+  align-items: center;
+
+  color: $lightFontColor;
+  font-size: 0.875rem;
+}
+.symbl-meeting-details > .symbl-title {
+  color: $darkFontColor;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.symbl-heading {
+  display: flex;
+  justify-content: space-between;
+}
+.symbl-attendees-names {
+  margin-top: 6px;
+}

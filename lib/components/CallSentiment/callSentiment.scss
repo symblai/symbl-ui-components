@@ -1,0 +1,20 @@
+@import "src/assets/utilityClasses";
+
+.symbl-call-sentiment-container {
+  @extend .basic-container;
+  text-align: left;
+}
+.symbl-call-sentiment-summary {
+  font-size: 14px;
+}
+.symbl-section-title {
+  font-weight: 600;
+  padding-bottom: 8px;
+  font-size: 16px;
+  margin: 0;
+}
+.symbl-call-sentiment-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

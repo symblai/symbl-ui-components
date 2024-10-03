@@ -1,0 +1,32 @@
+@import "src/assets/colors";
+@import "src/assets/utilityClasses";
+
+.attendee-chip.symbl-avatar-name {
+  padding: 12px;
+  margin: 2px;
+
+  .MuiChip-label {
+    margin: 2px;
+  }
+
+}
+.symbl-avatar-name.symbl-bordered-avatar-chip {
+  @extend .box-shadow1;
+  background: $white;
+  padding: 6px;
+  border: 1px solid $grey-border;
+}
+.symbl-avatar-name.symbl-bordered-avatar-chip span {
+  padding: 0;
+}
+.without-link.symbl-avatar-name.symbl-no-border-avatar-chip:active,
+.without-link.symbl-avatar-name.symbl-bordered-avatar-chip:active,
+.without-link.symbl-avatar-name.symbl-no-border-avatar-chip:hover,
+.without-link.symbl-avatar-name.symbl-bordered-avatar-chip:hover {
+  background-color: unset;
+}
+.symbl-flex-container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}

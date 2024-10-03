@@ -1,0 +1,92 @@
+@import "src/assets/colors";
+
+.symbl-factor {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.75rem;
+  text-align: initial;
+  justify-content: center;
+}
+.symbl-factor.symbl-show-clickable {
+  cursor: pointer;
+}
+.symbl-factor.symbl-grey-background {
+  background-color: $grey;
+}
+.symbl-factor .symbl-content.symbl-added-margin {
+  margin: 8px;
+  gap: 4px;
+  display: flex;
+  flex-direction: column;
+}
+.symbl-factor .symbl-title {
+  font-weight: 400;
+  color: $darkFontColor;
+  text-transform: none;
+  font-size: 0.75rem;
+  text-wrap: nowrap;
+}
+.symbl-factor .symbl-value {
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: left;
+}
+.symbl-factor button {
+  padding-top: 0;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: flex-start;
+  &:hover {
+    background-color: unset;
+  }
+}
+div.symbl-factor {
+  background-color: $white;
+  border: 1px solid #E2E8F0;
+
+  box-shadow: 0 1px 2px rgba(15, 26, 42, 0.08);
+  border-radius: 8px;
+  justify-content: space-between;
+  flex: 1;
+}
+div.symbl-factor .symbl-content {
+  margin: 2px 0;
+}
+
+div.symbl-factor.symbl-remove-flex {
+  flex: unset;
+}
+.symbl-prompt-window-open {
+  div.factor:first-of-type {
+    min-width: unset;
+  }
+}
+
+
+div[role="tooltip"] .symbl-factor-summary {
+  box-shadow: 0 1px 2px rgba(15, 26, 42, 0.08);
+  border-radius: 16px;
+  background: $white;
+  border: 1px solid #E2E8F0;
+  color: $darkFontColor;
+  margin-bottom: 16px;
+  padding: 16px;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+div[role="tooltip"] .symbl-tooltip-arrow {
+  color: $medium-dark;
+}
+
+.symbl-positive-container:hover {
+  background-color: $positive-container;
+}
+.symbl-neutral-container:hover {
+  background-color: $neutral-container;
+}
+.symbl-negative-container:hover {
+  background-color: $negative-container;
+}
+.symbl-na-score-container:hover {
+  background-color: unset;
+}

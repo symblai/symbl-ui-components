@@ -1,0 +1,36 @@
+@import "src/assets/colors";
+
+.symbl-factor-details .symbl-factor {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  min-width: unset;
+  border-radius: unset;
+  gap: 0;
+}
+.symbl-factor-details .symbl-factor .symbl-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.symbl-factor-details .symbl-factor .symbl-value {
+  margin: 0;
+}
+.symbl-factor-details .symbl-call-score-question-answer .symbl-question {
+  font-weight: 600;
+}
+.symbl-factor-details .symbl-call-score-question-answer {
+  padding-left: 8px;
+  font-size: 0.875rem;
+  border-left: 4px solid $positiveInfo;
+}
+.symbl-factor-details .symbl-what-worked-well {
+  border-color: $positiveInfo;
+}
+.symbl-factor-details .symbl-what-did-not-work {
+  border-color: $negativeInfo;
+}
+.symbl-factor-details .symbl-how-could-it-be-improved {
+  border-color: $neutralInfo;
+}

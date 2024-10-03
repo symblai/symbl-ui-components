@@ -1,0 +1,95 @@
+@import "src/assets/colors";
+@import "src/assets/utilityClasses";
+
+.symbl-call-score {
+  background: $grey;
+  border-radius: 0 0 16px 16px;
+  padding: 8px 24px 16px 24px;
+  border-top: 1px solid $white;
+  margin-bottom: 16px;
+
+  display: flex;
+
+  flex-wrap: wrap;
+  max-width: 75vw;
+
+  gap: 8px;
+}
+
+.symbl-value.symbl-na-score {
+  color: $lightFontColor;
+}
+.symbl-value.symbl-na-score svg {
+    filter: invert(0%) sepia(83%) saturate(0%) hue-rotate(318deg) brightness(103%) contrast(106%);
+}
+
+.symbl-call-score .symbl-total {
+  align-self: center;
+  min-width: 80px;
+}
+.symbl-call-score .symbl-total .symbl-title {
+  font-size: 0.875rem;
+}
+.symbl-call-score .symbl-total .symbl-value {
+  display: flex;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.symbl-call-score p, .symbl-call-score span {
+  margin: 0;
+  padding: 0;
+}
+
+.symbl-call-score .symbl-factors.symbl-show-clickable {
+  cursor: pointer;
+}
+.symbl-call-score .symbl-factors.symbl-grey-background {
+  background-color: $grey;
+  width: 100%;
+  padding: 2px 8px;
+  border-radius: 8px;
+  border: 1px solid $grey-border;
+}
+.symbl-call-score .symbl-factor {
+  margin-left: 8px;
+}
+
+.symbl-call-score .symbl-factors {
+  display: flex;
+  gap: 8px;
+  justify-content: stretch;
+  width: 100%;
+}
+.symbl-neutral {
+  color: $neutral;
+  stroke: $neutral;
+}
+.symbl-positive {
+  color: $green;
+  stroke: $green;
+}
+.symbl-negative {
+  color: $red;
+  stroke: $red;
+}
+.symbl-neutral.symbl-container {
+  color: $darkFontColor;
+  background-color: $neutralInfo;
+  padding: 14px;
+  border-radius: 8px;
+}
+.symbl-positive.symbl-container {
+  color: $darkFontColor;
+  background-color: $positiveInfo;
+  padding: 14px;
+  border-radius: 8px;
+}
+.symbl-negative.symbl-container {
+  color: $darkFontColor;
+  background-color: $negativeInfo;
+  padding: 14px;
+  border-radius: 8px;
+}

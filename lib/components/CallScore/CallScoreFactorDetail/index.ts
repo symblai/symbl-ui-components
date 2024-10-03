@@ -1,0 +1,1 @@
+export {CallScoreFactorDetail} from "./CallScoreFactorDetail";

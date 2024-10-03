@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Sintony&display=swap');
+
+.custom-header-field {
+    font-family: "Sintony", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 16px;
+    border: 1px solid grey;
+    border-radius: 14px;
+    text-align: center;
+}
+
+.custom-header-field .svg-icon {
+    filter: invert(43%) sepia(81%) saturate(694%) hue-rotate(152deg) brightness(100%) contrast(104%);
+    width: 20px;
+    height: 20px;
+}
+
+.custom-meeting-header-container {
+    font-family: "Sintony", sans-serif;
+    background: #d378f200;
+    padding: 12px;
+    border: 1px solid gray;
+    border-radius: 12px;
+}
+.custom-meeting-header-container .custom-header-field {
+    border: none;
+    padding: 8px;
+}
+
+.small-icon {
+    filter: invert(43%) sepia(81%) saturate(694%) hue-rotate(152deg) brightness(100%) contrast(104%);
+    width: 10px;
+    height: 10px;
+}
+.custom--attendees-header-field .symbl-attendees-container:hover {
+    background: lightcyan;
+}
+
+.custom-attendee-dropdown {
+    border-radius: 12px !important;
+    border: 1px solid black !important;
+    background: lightcyan !important;
+}

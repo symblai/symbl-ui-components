@@ -1,0 +1,48 @@
+$symbl-pink-shade: #DB3B5C;
+$symbl-purple-shade: #8937A5;
+$symbl-blue-shade: #455AC7;
+
+$body-background-color: #F6F8FC;
+
+$white: #ffffff;
+$white-shade1: #F1F4F9;
+$darkFontColor: #27364B;
+$lightFontColor: #617187;
+$light-neutral-700: #475569;
+
+$grey: #F6F8FC;
+$grey-border: #E2E8F0;
+$medium-dark: #94A3B8;
+
+$neutral: #956B2F;
+$green: #0B893F;
+$red: #DB3939;
+
+$positiveInfo: #A9EBC5;
+$negativeInfo: #FED7D7;
+$neutralInfo: #F4DA6F;
+
+$positive-container: #DDF7E8;
+$negative-container: #FFF5F5;
+$neutral-container: #FAF4C4;
+
+$purple: #0f1a2a7a;
+$dark-purple: #1D2838;
+
+$box-shadow-color1: #0f1a2a14;
+$box-shadow-color2: #0f1a2a0a;
+
+$brown-light: #e28a9c29;
+$brown-pink-shade: #d378f229;
+$brown-purple: #5a9cff29;
+
+$colored-linear-gradient: linear-gradient(270deg, $symbl-pink-shade 0%, $symbl-purple-shade 46.57%, $symbl-blue-shade 100%);
+$light-colored-linear-gradient: linear-gradient(270deg, #E28A9C 0%, #D378F2 38.54%, #5A9CFF 100%);
+$grey-colored-linear-gradient: linear-gradient(270deg, $brown-light 0%, $brown-pink-shade 38.54%, $brown-purple 100%), $white;
+$pink-linear-gradient: #FEF7F8;
+
+:export {
+  positiveInfo: $positiveInfo;
+  negativeInfo: $negativeInfo;
+  neutralInfo: $neutralInfo;
+}
