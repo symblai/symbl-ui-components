@@ -1,11 +1,11 @@
-import {MeetingHeaderWithAPIProps, MeetingMetadata} from "./MeetingHeaderWithAPI.types.ts";
+import {MeetingHeaderWithAPIProps, MeetingMetadata} from "./MeetingHeader.types.ts";
 import {useEffect, useRef, useState} from "react";
 import {MeetingsNotFoundErrorMessage, UnauthenticatedUserErrorMessage} from "../../constants.ts";
 import {getMeetingMetadata} from "../APIService.ts";
 import {MeetingHeader as MeetingHeaderDumbComponent} from "../../MeetingHeader/index.ts"
 import {MeetingHeaderLoader} from "./MeetingHeaderLoader.tsx";
 
-export const MeetingHeaderWithAPI: React.FC<MeetingHeaderWithAPIProps> = (props: MeetingHeaderWithAPIProps ) => {
+export const MeetingHeader: React.FC<MeetingHeaderWithAPIProps> = (props: MeetingHeaderWithAPIProps ) => {
 
     const {accessToken, conversationId,
         showAttendeeNames,

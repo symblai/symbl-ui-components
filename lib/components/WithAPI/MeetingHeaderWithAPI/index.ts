@@ -1,1 +1,1 @@
-export {MeetingHeaderWithAPI} from "./MeetingHeaderWithAPI";
+export {MeetingHeader} from "./MeetingHeader.tsx";

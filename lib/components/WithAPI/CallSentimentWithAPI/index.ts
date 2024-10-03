@@ -1,1 +1,1 @@
-export {CallSentimentWithAPI} from "./CallSentimentWithAPI";
+export {CallSentiment} from "./CallSentiment.tsx";

@@ -1,1 +1,1 @@
-export {CallScoreWithAPI} from "./CallScoreWithAPI";
+export {CallScore} from "./CallScore";

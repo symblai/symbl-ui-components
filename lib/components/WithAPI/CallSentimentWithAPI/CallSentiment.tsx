@@ -1,11 +1,11 @@
-import {CallSentimentWithAPIProps, CallSentimentData} from "./CallSentimentWithAPI.types.ts";
+import {CallSentimentWithAPIProps, CallSentimentData} from "./CallSentiment.types.ts";
 import {useEffect, useRef, useState} from "react";
 import {MeetingsNotFoundErrorMessage, UnauthenticatedUserErrorMessage} from "../../constants.ts";
 import {getCallSentiment} from "../APIService.ts";
 import {CallSentiment as CallSentimentDumbComponent} from "../../CallSentiment/index.ts"
 import {CallSentimentLoader} from "./CallSentimentLoader.tsx";
 
-export const CallSentimentWithAPI: React.FC<CallSentimentWithAPIProps> = (props: CallSentimentWithAPIProps ) => {
+export const CallSentiment: React.FC<CallSentimentWithAPIProps> = (props: CallSentimentWithAPIProps ) => {
 
     const {accessToken,
         conversationId,
@@ -20,7 +20,8 @@ export const CallSentimentWithAPI: React.FC<CallSentimentWithAPIProps> = (props:
         chartBackgroundColors,
         hideSummaryTooltip,
         sentimentColors,
-        classes
+        classes,
+        displayConfig
     } = props;
 
     const dataFetchedRef = useRef(false);
@@ -68,6 +69,7 @@ export const CallSentimentWithAPI: React.FC<CallSentimentWithAPIProps> = (props:
                                                   hideSummaryTooltip={hideSummaryTooltip}
                                                   sentimentColors={sentimentColors}
                                                   classes={classes}
+                                                  displayConfig={displayConfig}
             />
         }
         {

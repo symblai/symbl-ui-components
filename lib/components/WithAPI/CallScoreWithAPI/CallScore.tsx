@@ -1,11 +1,11 @@
-import {CallScoreWithAPIProps, CallScoreData} from "./CallScoreWithAPI.types.ts";
+import {CallScoreWithAPIProps, CallScoreData} from "./CallScore.types.ts";
 import {useEffect, useRef, useState} from "react";
 import {MeetingsNotFoundErrorMessage, UnauthenticatedUserErrorMessage} from "../../constants.ts";
 import {getCallScore} from "../APIService.ts";
 import {CallScore as CallScoreDumbComponent} from "../../CallScore/index.ts"
 import {CallScoreLoader} from "./CallScoreLoader.tsx";
 
-export const CallScoreWithAPI: React.FC<CallScoreWithAPIProps> = (props: CallScoreWithAPIProps ) => {
+export const CallScore: React.FC<CallScoreWithAPIProps> = (props: CallScoreWithAPIProps ) => {
 
     const {accessToken,
         conversationId,

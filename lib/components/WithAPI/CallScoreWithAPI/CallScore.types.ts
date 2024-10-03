@@ -9,9 +9,6 @@ export interface CallScoreWithAPIProps {
     hideLoader?: boolean,
     customErrorMessage?: string,
     customLoader?: ReactElement,
-    callScore: number;
-    summary: string,
-    factors: Factor[];
     summaryTooltipPlacement?: TooltipPlacementTypes,
     classes?: {
         container?: string,

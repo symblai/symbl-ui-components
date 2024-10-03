@@ -45,5 +45,5 @@ export const Sentiment : React.FC<CallSentiment> = ({sentiment, isBoldText, sent
 interface CallSentiment {
     sentiment: string,
     isBoldText?: boolean,
-    sentimentColors: SentimentColors
+    sentimentColors?: SentimentColors
 }

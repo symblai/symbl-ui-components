@@ -9,7 +9,7 @@ export interface MeetingHeaderWithAPIProps {
     customErrorMessage?: string,
     customLoader?: ReactElement
     meetingLink?: string,
-    showAttendeeNames: boolean,
+    showAttendeeNames?: boolean,
     attendeesGradientColors?: string[],
     classes?: {
         container?: string,

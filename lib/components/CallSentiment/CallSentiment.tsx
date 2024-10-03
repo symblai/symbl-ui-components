@@ -44,7 +44,7 @@ export const CallSentiment = (props: CallSentimentProps) => {
                                 chartBackgroundColors={chartBackgroundColors}
                                 hideSummaryTooltip={hideSummaryTooltip}
                                 toolTipSentimentColors={sentimentColors}
-                                classes={{container: classes?.chartContainer, tooltip: classes?.chartTooltip}}
+                                classes={classes ? {container: classes?.chartContainer, tooltip: classes?.chartTooltip} : undefined}
                 />}
         </div>
     </ThemeProvider>

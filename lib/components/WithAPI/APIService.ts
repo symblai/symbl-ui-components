@@ -1,8 +1,8 @@
 import {getRequest} from "./serviceMiddleware.ts";
 import {BASE_PATH_URL} from "../constants.ts";
-import {MeetingMetadata} from "./MeetingHeaderWithAPI/MeetingHeaderWithAPI.types.ts";
-import {CallScoreData} from "./CallScoreWithAPI/CallScoreWithAPI.types.ts";
-import {CallSentimentData} from "./CallSentimentWithAPI/CallSentimentWithAPI.types.ts";
+import {MeetingMetadata} from "./MeetingHeaderWithAPI/MeetingHeader.types.ts";
+import {CallScoreData} from "./CallScoreWithAPI/CallScore.types.ts";
+import {CallSentimentData} from "./CallSentimentWithAPI/CallSentiment.types.ts";
 
 const BASE_PATH = '/v1/insights/conversations'
 const meetingMetadataPath = (conversationId: string) => `${BASE_PATH}/${conversationId}/metadata`
