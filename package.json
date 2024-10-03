@@ -1,6 +1,6 @@
 {
   "name": "@symblai/symbl-ui-components",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -18,8 +18,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "prepublishOnly": "npm install && npm run build",
-    "publish-beta": "npm install && npm run build && npm publish --access public --tag beta",
-    "publish-prod": "npm install && npm run build && npm publish --access public"
+    "publish-beta": "npm publish --access public --tag beta",
+    "publish-prod": "npm publish --access public"
   },
   "peerDependencies": {
     "@emotion/react": "^11.11.4",
