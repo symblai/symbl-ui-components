@@ -39,12 +39,12 @@ You can import the Symbl UI Components in your project, ES5 and ES6 syntax:
 
 #### ES6
 ```js
-import {CallScoreWithAPI} from '@symblai/symbl-ui-components';
+import {CallScore} from '@symblai/symbl-ui-components';
 ```
 
 #### ES5
 ```js
-const {CallScoreWithAPI} = require('@symblai/symbl-ui-components');
+const {CallScore} = require('@symblai/symbl-ui-components');
 ```
 
 ### Importing
@@ -52,6 +52,6 @@ const {CallScoreWithAPI} = require('@symblai/symbl-ui-components');
 Pass generated conversation id and access token to the UI component
 
 ```js
-<CallScoreWithAPI conversationId={""} accessToken={""} />
+<CallScore conversationId={""} accessToken={""} />
 ```
 
