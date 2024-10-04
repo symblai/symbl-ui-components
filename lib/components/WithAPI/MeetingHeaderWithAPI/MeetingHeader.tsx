@@ -16,7 +16,9 @@ export const MeetingHeader: React.FC<MeetingHeaderWithAPIProps> = (props: Meetin
         customErrorMessage,
         onLoadingChange,
         onFetchError,
-        customLoader
+        customLoader,
+        attendeesLinks,
+        icons
     } = props;
 
     const dataFetchedRef = useRef(false);
@@ -36,7 +38,15 @@ export const MeetingHeader: React.FC<MeetingHeaderWithAPIProps> = (props: Meetin
             dataFetchedRef.current = true;
             try {
                 const meetingSummary = await getMeetingMetadata(accessToken, conversationId);
-                setMeetingSummary(meetingSummary)
+                let attendees;
+                if(!!attendeesLinks && attendeesLinks.length > 0) {
+                    attendees = meetingSummary.attendees.map(({ name, userId}) => {
+                        const link =  attendeesLinks.find((link) => link.email === userId);
+                        return {name, link, userId}
+                    })
+                }
+                // @ts-ignore
+                setMeetingSummary({...meetingSummary, attendees})
                 setMeetingsLoading(false)
             }catch(e) {
                 setMeetingsLoading(false)
@@ -64,6 +74,7 @@ export const MeetingHeader: React.FC<MeetingHeaderWithAPIProps> = (props: Meetin
                                                             showAttendeeNames={showAttendeeNames}
                                                             classes={classes}
                                                             attendeesGradientColors={attendeesGradientColors}
+                                                            icons={icons}
             />
         }
         {

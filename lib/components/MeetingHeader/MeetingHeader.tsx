@@ -19,7 +19,9 @@ export const MeetingHeader: React.FC<MeetingHeaderProps> = (props: MeetingHeader
         prospectCompany,
         callStage,
         attendees,
-        showAttendeeNames, classes, attendeesGradientColors} = props;
+        showAttendeeNames, classes, attendeesGradientColors,
+        icons
+    } = props;
 
     // const icon = classes?.icon ? classes.icon : '',
     //     headerFields = classes?.headerFields ? classes.headerFields : '',
@@ -43,23 +45,25 @@ export const MeetingHeader: React.FC<MeetingHeaderProps> = (props: MeetingHeader
             <div className={"symbl-meeting-details"}>
                 {
                     !!dateTime && <>
-                        <MeetingDate dateTime={dateTime} classes={{icon: getClassName(classes?.icons?.date), headerField: getClassName(classes?.headerFields?.date)}}/>
-                        <MeetingTime dateTime={dateTime} classes={{icon: getClassName(classes?.icons?.time), headerField: getClassName(classes?.headerFields?.time)}}/>
+                        <MeetingDate dateTime={dateTime} classes={{icon: getClassName(classes?.icons?.date), headerField: getClassName(classes?.headerFields?.date)}} icon={icons?.date}/>
+                        <MeetingTime dateTime={dateTime} classes={{icon: getClassName(classes?.icons?.time), headerField: getClassName(classes?.headerFields?.time)}} icon={icons?.time}/>
                     </>
                 }
                 {
-                    !!duration && <MeetingDuration duration={duration} classes={{icon: getClassName(classes?.icons?.duration), headerField: getClassName(classes?.headerFields?.duration)}}/>
+                    !!duration && <MeetingDuration duration={duration} classes={{icon: getClassName(classes?.icons?.duration), headerField: getClassName(classes?.headerFields?.duration)}} icon={icons?.duration}/>
                 }
                 {
-                    !!prospectCompany && <ProspectCompany prospectCompany={prospectCompany} classes={{icon: getClassName(classes?.icons?.prospectCompany), headerField: getClassName(classes?.headerFields?.prospectCompany)}}/>
+                    !!prospectCompany && <ProspectCompany prospectCompany={prospectCompany} classes={{icon: getClassName(classes?.icons?.prospectCompany), headerField: getClassName(classes?.headerFields?.prospectCompany)}} icon={icons?.prospectCompany}/>
                 }
                 {
-                    !!callStage && <CallStage callStage={callStage} classes={{icon: getClassName(classes?.icons?.callStage), headerField: getClassName(classes?.headerFields?.callStage)}}/>
+                    !!callStage && <CallStage callStage={callStage} classes={{icon: getClassName(classes?.icons?.callStage), headerField: getClassName(classes?.headerFields?.callStage)}} icon={icons?.callStage}/>
                 }
                 {
                     attendees?.length > 0 && !showAttendeeNames && <Attendees attendees={attendees} 
                                                                               classes={{icon: getClassName(classes?.icons?.attendees), headerField: getClassName(classes?.headerFields?.attendees), attendeesDropdown: getClassName(classes?.attendeesDropdown)}} 
-                                                                              attendeesGradientColors={attendeesGradientColors}/>
+                                                                              attendeesGradientColors={attendeesGradientColors}
+                                                                              icon={icons?.attendees}
+                    />
                 }
             </div>
         </div>

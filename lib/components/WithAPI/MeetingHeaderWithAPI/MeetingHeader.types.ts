@@ -11,6 +11,7 @@ export interface MeetingHeaderWithAPIProps {
     meetingLink?: string,
     showAttendeeNames?: boolean,
     attendeesGradientColors?: string[],
+    attendeesLinks?: AttendeesLink[]
     classes?: {
         container?: string,
         meetingTitle?: string,
@@ -31,9 +32,21 @@ export interface MeetingHeaderWithAPIProps {
             attendees?: string,
         },
         attendeesDropdown?: string
+    },
+    icons?: {
+        date?: ReactElement,
+        time?: ReactElement,
+        duration?: ReactElement,
+        prospectCompany?: ReactElement,
+        callStage?: ReactElement,
+        attendees?: ReactElement,
     }
 }
 
+export interface AttendeesLink {
+    email: string,
+    link: string
+}
 export interface MeetingMetadata {
     conversationId: string,
     callStage: string,
@@ -42,7 +55,7 @@ export interface MeetingMetadata {
     startTime: string,
     duration: string,
     conversationType: string,
-    attendees: Array<Attendee>,
+    attendees: Attendee[],
     audioUrl: string,
     videoUrl: string,
     createdOn: string,
@@ -52,5 +65,6 @@ export interface MeetingMetadata {
 export interface Attendee {
     id: string,
     name: string,
-    userId: string
+    userId: string,
+    link?: string
 }

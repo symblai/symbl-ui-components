@@ -1,6 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { MeetingHeader } from '../../../../lib/components/WithAPI/MeetingHeaderWithAPI';
 import {ACCESS_TOKEN, CONVERSATION_ID, INVALID_CONVERSATION_ID} from "../contants.ts";
+import UsersIcon from "../../assets/users.svg?react"
+import LadderIcon from "../../assets/Ladder.svg?react"
+import CalenderIcon from "../../assets/calendar.svg?react"
+import DurationIcon from "../../assets/Duration.svg?react"
+import TimeIcon from "../../assets/Time.svg?react"
 import "./meetingHeader.css"
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
@@ -66,6 +71,21 @@ export const WithMeetingLink: Story = {
     },
 };
 
+export const WithAttendeesExternalLink: Story = {
+    args: {
+        accessToken: ACCESS_TOKEN,
+        conversationId: CONVERSATION_ID,
+        attendeesLinks: [{
+            email: "john.doe@agent.com",
+            link: "https://salesforce/attendee1"
+        }, {
+            email: "wick@prospect.com",
+            link: "https://salesforce/attendee2"
+        }],
+        showAttendeeNames: false
+    },
+};
+
 export const ShowAttendeeNames: Story = {
     args: {
         accessToken: ACCESS_TOKEN,
@@ -80,6 +100,21 @@ export const CustomAttendeeGradientColors: Story = {
         conversationId: CONVERSATION_ID,
         showAttendeeNames: true,
         attendeesGradientColors: ["lightPink", "grey"]
+    },
+};
+
+export const CustomIcons: Story = {
+    args: {
+        accessToken: ACCESS_TOKEN,
+        conversationId: CONVERSATION_ID,
+        showAttendeeNames: true,
+        icons: {
+            date: <CalenderIcon style={{width: "20px", height: "20px"}}/>,
+            duration: <DurationIcon style={{width: "20px", height: "20px"}}/>,
+            attendees: <UsersIcon style={{width: "20px", height: "20px"}}/>,
+            callStage: <LadderIcon style={{width: "20px", height: "20px"}}/>,
+            time: <TimeIcon style={{width: "20px", height: "20px"}}/>
+        }
     },
 };
 

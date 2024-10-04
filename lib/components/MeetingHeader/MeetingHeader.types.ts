@@ -30,6 +30,14 @@ export interface MeetingHeaderProps {
             attendees?: string,
         },
         attendeesDropdown?: string
+    },
+    icons?: {
+        date?: ReactElement,
+        time?: ReactElement,
+        duration?: ReactElement,
+        prospectCompany?: ReactElement,
+        callStage?: ReactElement,
+        attendees?: ReactElement,
     }
 }
 
@@ -64,7 +72,8 @@ export interface CallStageProps {
 
 export interface Attendee {
     name: string,
-    link?: string
+    link?: string,
+    userId: string
 }
 
 export interface AttendeesProps {
