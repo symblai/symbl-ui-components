@@ -1,4 +1,4 @@
-import {CallScoreWithAPIProps, CallScoreData} from "./CallScore.types.ts";
+import {CallScoreData, CallScoreWithAPIProps} from "./CallScore.types.ts";
 import {useEffect, useRef, useState} from "react";
 import {MeetingsNotFoundErrorMessage, UnauthenticatedUserErrorMessage} from "../../constants.ts";
 import {getCallScore} from "../APIService.ts";

@@ -1,5 +1,5 @@
 import {getRequest} from "./serviceMiddleware.ts";
-import {BASE_PATH_URL} from "../constants.ts";
+import {BASE_PATH_URL, COMPONENTS} from "../constants.ts";
 import {MeetingMetadata} from "./MeetingHeaderWithAPI/MeetingHeader.types.ts";
 import {CallScoreData} from "./CallScoreWithAPI/CallScore.types.ts";
 import {CallSentimentData} from "./CallSentimentWithAPI/CallSentiment.types.ts";
@@ -12,25 +12,9 @@ export const callScoreUrl = (conversationId: string) => `${BASE_PATH_URL}${callS
 const callSentimentPath = (conversationId: string) => `${BASE_PATH}/${conversationId}/call-sentiment`
 export const callSentimentUrl = (conversationId: string) => `${BASE_PATH_URL}${callSentimentPath(conversationId)}`
 
-// const getData = (url: string, accessToken: string, type: any) => {
-//     return new Promise((resolve, reject) => {
-//         getRequest(url, accessToken)
-//             .then(data => {
-//                 if(!data) {
-//                     reject(MeetingNotFoundForConversationIdErrorMessage);
-//                 } else {
-//                     resolve(data: <type>)
-//                 }
-//             })
-//             .catch(() => {
-//                 reject()
-//             });
-//     });
-//
-// }
 export const getMeetingMetadata = async (accessToken: string, conversationId: string) : Promise<MeetingMetadata> => {
     return new Promise((resolve, reject) => {
-        getRequest(meetingMetadataUrl(conversationId), accessToken)
+        getRequest(meetingMetadataUrl(conversationId), accessToken, COMPONENTS.MEETING_HEADER)
             .then(data => {
                 if(!data) {
                     reject();
@@ -46,7 +30,7 @@ export const getMeetingMetadata = async (accessToken: string, conversationId: st
 
 export const getCallScore = (accessToken: string, conversationId: string) : Promise<CallScoreData> => {
     return new Promise((resolve, reject) => {
-        getRequest(callScoreUrl(conversationId), accessToken)
+        getRequest(callScoreUrl(conversationId), accessToken, COMPONENTS.CALL_SCORE)
             .then(data => {
                 if(!data) {
                     reject();
@@ -62,7 +46,7 @@ export const getCallScore = (accessToken: string, conversationId: string) : Prom
 
 export const getCallSentiment = (accessToken: string, conversationId: string) : Promise<CallSentimentData> => {
     return new Promise((resolve, reject) => {
-        getRequest(callSentimentUrl(conversationId), accessToken)
+        getRequest(callSentimentUrl(conversationId), accessToken, COMPONENTS.CALL_SENTIMENT)
             .then(data => {
                 if(!data) {
                     reject();
